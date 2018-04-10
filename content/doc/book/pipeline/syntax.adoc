@@ -868,6 +868,8 @@ This is the same as if the child conditions were nested in an `allOf` condition
 
 More complex conditional structures can be built
 using the nesting conditions: `not`, `allOf`, or `anyOf`.
+An `anyOf` condition will return as soon as one of the conditions nested within it returns true. Any conditions listed after that will not be executed.
+`script` conditions will evaluate to "true" if they return any value other than `null`.
 Nesting conditions may be nested to any arbitrary depth.
 
 [cols="^10h,>90a",role=syntax]
